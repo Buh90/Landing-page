@@ -1,0 +1,226 @@
+:root {
+    --dark-blue: #1f2937;
+    --light-blue: #3882f6;
+    --light-grey: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    color:#fff;
+    display: flex;
+    background-color: var(--dark-blue);
+    height: 60px;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light-blue);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 20px var(--light-blue);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 30px;
+    transition: color 200ms;
+}
+
+nav a:hover {
+    color: var(--light-blue)
+}
+
+#hero-section {
+    min-height: 70vh;
+    color: #fff;
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0
+}
+
+.title-text, .hero-image {
+    margin: 0 60px;
+}
+
+.title-text p {
+    line-height: 2;
+    font-size: 18px;
+}
+
+.title-text button {
+margin-top: 16px;
+padding: 8px 20px;
+background-color: var(--light-blue);
+color: white;
+border: none;
+font-size: 18px;
+font-weight: 400;
+border-radius: 6px;
+transition: background-color 300ms;
+border: 2px solid var(--light-blue);
+cursor: pointer;
+}
+
+.title-text button:hover {
+    color: var(--light-blue);
+    background-color: var(--dark-blue);
+}
+
+h1 {
+font-size: 36px;
+margin-bottom: 16px;
+}
+
+.hero-image {
+    aspect-ratio: 3/2;
+    background-color: var(--light-grey);
+    flex: 0 0 40%;
+    max-width: 600px;
+}
+
+#projects {
+    min-height: 50vh;
+    text-align: center;
+    padding: 40px;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--light-grey);
+    width: 200px;
+    padding: 30px;
+    border-radius: 8px;
+    transition: all 200ms;
+}
+
+.card:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 0 10px 5px var(--light-blue);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--light-blue);
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#quotation {
+    padding: 70px;
+    text-align: center;
+    color: white;
+    background-color: var(--light-blue);
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+#quotation p:first-of-type {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 20px; 
+}
+
+#action {
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
+
+.action-container {
+    background-color: var(--light-blue);
+    width: 70%;
+    max-width: 900px;
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 3px rgba(0,0,0,0.2);
+    border: 3px solid white;
+    margin: 50px 0
+}
+
+.action-container button {
+    flex: 0 0 100px;
+    background-color: var(--light-blue);
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    font-size: 17px;
+    padding: 8px;
+    margin-left: 50px;
+}
+
+.action-container button:hover {
+    background-color: white;
+    color: var(--light-blue);
+    cursor: pointer;
+}
+
+#footer {
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark-blue);
+    color: #fff;
+line-height: 70px;
+text-align: center;
+
+}
+
+@media (max-width: 900px) {
+    #hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        width: 70%;
+        aspect-ratio: 3/2;
+        background-color: var(--light-grey);
+        flex: none;
+        margin-top: 30px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 750px) {
+    .action-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .action-container button {
+        flex: 1 0 100%;
+        margin: 20px 0 0 0
+    }
+
+}
